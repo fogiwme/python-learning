@@ -56,3 +56,5 @@ print(f'{guest_list[1]}, пишу сообщить, что обед в силе!
 del guest_list[0]
 del guest_list[0]
 print(f'\n{guest_list}')
+
+print(len(guest_list))
