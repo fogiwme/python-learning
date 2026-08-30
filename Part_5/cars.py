@@ -1,6 +1,12 @@
 #Простая программа с использованием if
 
-cars = ['audi', 'bmw', 'porshe', 'tesla']
+cars = [
+'audi',
+'bmw',
+'porshe',
+'tesla'
+]
+
 for car in cars:
 	if car == 'bmw':
 		print(car.upper())
