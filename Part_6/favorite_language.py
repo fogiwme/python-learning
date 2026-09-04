@@ -77,10 +77,22 @@ print(languages)
 # Очень похоже на словарь, но тут нет конструкции ключ-значение
 
 
+favorite_languages = {
+	'alexey': ['python', 'c++', 'html'],
+	'vitya': ['swift', 'css'],
+	'dima': ['c#'],
+	'edward': ['ruby'],
+	'sasha': ['go'],
+}
 
 
-
-
+for name, languages in favorite_languages.items():
+	if len(languages) == 1:
+		print(f"\n{name.title()}'s favorite language are:")
+	else: 
+		print(f"\n{name.title()}'s favorite languages are:")
+	for language in languages:
+		print(f'\t{language.title()}')
 
 
 
