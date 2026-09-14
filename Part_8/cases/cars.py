@@ -1,11 +1,31 @@
 # Выполним упражнение 8.14
 
-def car_info(manufacturer, brand, **info):
-	info['car_manufacturer'] = manufacturer
-	info['car_brand'] = brand
-	return info
+import function_car_info
+car = function_car_info.car_info('nissan', 'skyline R34', 
+				color='white-blue',
+				neon_color='blue')
+print(car)
 
-car = car_info('nissan', 'skyline R34', 
+from function_car_info import car_info
+car = function_car_info.car_info('nissan', 'skyline R34', 
+				color='white-blue',
+				neon_color='blue')
+print(car)
+
+from function_car_info import car_info as ci
+car = ci('nissan', 'skyline R34', 
+				color='white-blue',
+				neon_color='blue')
+print(car)
+
+import function_car_info as fci
+car = fci.car_info('nissan', 'skyline R34', 
+				color='white-blue',
+				neon_color='blue')
+print(car)
+
+from function_car_info import *
+car = function_car_info.car_info('nissan', 'skyline R34', 
 				color='white-blue',
 				neon_color='blue')
 print(car)
