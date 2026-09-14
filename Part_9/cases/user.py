@@ -2,7 +2,7 @@
 
 class User:
 	def __init__(self, first, last, age, city):
-		"""Инициализируем атрибуты fitst, last, age и city"""
+		"""Инициализируем атрибуты first, last, age и city"""
 		self.first_name = first.title()
 		self.last_name = last.title()
 		self.age = age
@@ -17,8 +17,8 @@ class User:
 
 	def greet_user(self):
 		"""Выводит угрожающее сообщение пользователю"""
-		message = (f'\nПриветствую, {self.first_name} {self.last_name}! ')
-		message +=(f'Я знаю, что тебе {self.age} лет, и ты живешь в {self.city}\n')
+		message = f'\nПриветствую, {self.first_name} {self.last_name}! '
+		message += f'Я знаю, что тебе {self.age} лет, и ты живешь в {self.city}\n'
 		print(message)
 
 user1 = User('алексей', 'крылов', 22, 'пушкино')
