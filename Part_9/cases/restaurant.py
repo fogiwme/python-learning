@@ -1,6 +1,6 @@
 # Выполним упражнение 9.1, 9.2, 9.4
 
-class Restaurant():
+class Restaurant:
 	def __init__(self, restaurant_name, cuisine_type):
 		"""Инициализирует атрибуты restaurant_name и cuisine_type"""
 		self.restaurant_name = restaurant_name
@@ -29,7 +29,7 @@ class Restaurant():
 
 # Напишем экземпляр на основе своего класса:
 
-restaurant = Restaurant("Krylov's", 'japanese')
+"""restaurant = Restaurant("Krylov's", 'japanese')
 print(restaurant.restaurant_name)
 print(restaurant.cuisine_type)
 
@@ -48,7 +48,7 @@ restaurant.set_number_served(5)
 restaurant.print_number_served()
 
 restaurant.increment_number_served(3)
-restaurant.print_number_served()
+restaurant.print_number_served()"""
 
 
 

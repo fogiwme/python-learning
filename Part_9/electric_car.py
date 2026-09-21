@@ -1,37 +1,6 @@
 # Выполним упражнение 9.9
 
-class Car():
-	"""Простая модель автомобиля"""
-
-	def __init__(self, make, model, year):
-		"""Инициализирует атрибуты описания автомобиля"""
-		self.make = make
-		self.model = model
-		self.year = year
-		self.odometer_reading = 0
-
-	def get_descriptive_name(self):
-		"""Возвращает аккуратно отформатированное описание"""
-		long_name = f'{self.year} {self.make} {self.model}'
-		return long_name.title()
-
-	def read_odometer(self):
-		"""Выводит пробег машины в милях"""
-		print(f"This car has {self.odometer_reading} miles on it!")
-
-	def update_odometer(self, mileage):
-		"""
-		Устанавливает заданное значение на одометре.
-		При попытке обратной подкрутки изменение отклоняется
-		"""
-		if mileage >= self.odometer_reading:	
-			self.odometer_reading = mileage
-		else:
-			print("\nYou can't roll back an odometer!")
-
-	def increment_odometer(self, mileas):
-		"""Увеличивает показания одометра с заданным приращением"""
-		self.odometer_reading += mileas
+from car import Car
 
 class Battery():
 	"""Простая модель аккумулятора электромобиля"""	
@@ -72,7 +41,7 @@ class ElectricCar(Car):
 		"""У электромобилей нет бензобака"""
 		print('This car does not need a gas tank!')
 
-my_tesla = ElectricCar('tesla', 'model S', 2019)
+"""my_tesla = ElectricCar('tesla', 'model S', 2019)
 print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery()
 my_tesla.fill_gas_tank()
@@ -82,7 +51,7 @@ my_gtr = ElectricCar('nissan', 'GTR R-34', 2011)
 my_gtr.battery.get_range()
 my_gtr.battery.upgrade_battery()
 my_gtr.battery.get_range()
-
+"""
 
 
 

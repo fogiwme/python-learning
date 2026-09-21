@@ -1,4 +1,6 @@
-class Car():
+"""Класс для представления машин с бензиновым и электродвигателем."""
+
+class Car:
 	"""Простая модель автомобиля"""
 
 	def __init__(self, make, model, year):
@@ -31,26 +33,44 @@ class Car():
 		"""Увеличивает показания одометра с заданным приращением"""
 		self.odometer_reading += mileas
 
-my_new_car = Car('audi', 'a4', 2019)
-print(my_new_car.get_descriptive_name())
+class Battery:
+	"""Простая модель аккумулятора электромобиля"""	
+	def __init__(self, battery_size=75):
+		"""Инициализирует атрибуты аккумулятора"""
+		self.battery_size = battery_size
 
-my_new_car.odometer_reading = 60
-my_new_car.read_odometer()
+	def describe_battery(self):
+		"""Выводит информацию о мощности аккамулятора"""
+		print(f'This car has a {self.battery_size}-kWh bettery.')
 
-my_new_car.update_odometer(59)
-my_new_car.read_odometer()
+	def get_range(self):
+		"""Выводит приблизительный запас хода для аккумулятора"""
+		if self.battery_size == 75:
+			range = 260
+		elif self.battery_size == 100:
+			range = 315
 
-my_used_car = Car('nissan', 'r34', 2015)
-print(my_used_car.get_descriptive_name())
+		print(f"This car can go about {range} miles on a full charge\n")
 
-my_used_car.update_odometer(23_500)
-my_used_car.read_odometer()
-
-my_used_car.increment_odometer(300)
-my_used_car.read_odometer()
+	def upgrade_battery(self):
+		if self.battery_size != 100:
+			self.battery_size = 100
 
 
+class ElectricCar(Car):
+	"""Представляет аспекты машины, специфические для электромобилей."""
 
+	def __init__(self, make, model, year):
+		"""
+		Инициализирует атрибуты класса-родителя
+		Затем инициализирует атрибуты, специфические для электромобиля
+		"""
+		super().__init__(make, model, year)
+		self.battery = Battery()
+
+	def fill_gas_tank(self):
+		"""У электромобилей нет бензобака"""
+		print('This car does not need a gas tank!')
 
 
 
